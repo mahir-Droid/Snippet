@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    
+    <h1>Home Page</h1>
+
+    <p>
+        {{htmlvar}}
+    </p>
+    
+
+    <form action="{% url 'count' %}">
+        <textarea cols="40" rows="10" name="fulltext"></textarea>
+        <br/>
+        <br/>
+        <input type="submit" value="Count!" />
+
+    </form>
+
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    
+    
+    <a href="{% url 'about' %}">About Me</a>
+
+</body>
+</html> 
