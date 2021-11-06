@@ -145,17 +145,117 @@ while True:
             started = False
             print("Car stopped")
     elif command == "help":
-        print("""
-start - to start the car
-stop - to stop the car
-quit - to quit
-        """)
+        print("start - to start the car ")
+        print("stop - to stop the car")
+        print("quit - to quit")
     elif command == "quit":
         break
     else:
         print("Sorry, I don't understand that")
-        
+
+
+for item in range(5, 10, 2):
+        print(item)
+
+prices = [10, 20, 30]
+total = 0
+for value in prices:
+        total += value
+print(f" Total: {total}")
+
+
+for x in range(4):
+        for y in range (3):
+                print(f'{x},{y}')
+
+numbers = [2, 2, 2, 2, 5]
+for x_count in numbers:
+        output = ''
+        for count in range(x_count):
+                output += 'x'
+        print(output)
+
+
+names = ['John', 'Bob', 'Mosh', 'Sarah', 'Mary']
+names[0] = 'Jon'
+print(names)
+
+num_list =[7, 3, 9, 10, 5, 2, 8]
+value = num_list[0]
+for num in num_list:
+    if num > value:
+        value = num
+print(value)
+
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+matrix[0][1] = 20
+print(matrix[0][1])
+
+for row in matrix:
+    for item in row:
+        print(item)
+
+numbers = [5, 2, 1, 7, 4]
+numbers.append(20)
+numbers.insert(2, 4)
+numbers.remove(1)
+print(numbers)
+print(numbers.index(7))
+numbers.sort()
+print(numbers)
+numbers.reverse()
+print(numbers)
+
+numbers = [2, 2, 4, 6, 3, 4, 6, 1]
+unique = []
+for number in numbers:
+    if number not in unique:
+        unique.append(number)
+print(unique)
+
+coordinates = (1, 2, 3)
+x, y, z = coordinates
+print(x)
+
+customer = {
+    "name": "Subah Jareen",
+    "age": 23,
+    "is_verified": True
+}
+customer["Birthdate"] = "Dec 21, 98"
+print(customer.get("Birthdate"))
+
+phone = input("phone number: ")
+digits_map = {
+    "1": "One",
+    "2": "Two",
+    "3": "Three",
+    "4": "Four",
+    "5": "Five",
+    "6": "Six",
+    "7": "Seven",
+    "8": "Eight",
+    "9": "Nine"
+}
+output = ""
+for character in phone:
+    output += digits_map.get(character, "!") + " "
+print(output)
+
+message = input(">")
+words = message.split(' ')
+emojis = {
+    ":)": "😊",
+    ":(": "😢"
+}
+output = ""
+for word in words:
+    output += emojis.get(word, word) + " "
+print(output)
 """
-
-
 
