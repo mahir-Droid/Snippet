@@ -11,7 +11,7 @@
 
 	};
 	fullHeight();
-	$('#sidebarCollapse').toggleClass('active');
+	$('#sidebar').toggleClass('active');
 	$('#sidebarCollapse').on('click', function () {
       $('#sidebar').toggleClass('active');
   });
