@@ -22,11 +22,11 @@
 
 	        <ul class="list-unstyled components mb-5">
             
-	          <li class="active">
+	          <li>
               <a href="index.html">Home</a>
             </li>
 
-	          <li>
+	          <li class="active">
 	              <a href="1.html">1. Introduction</a>
 	          </li>
                         
@@ -70,6 +70,7 @@
                 </li>
               </ul>
 	          </li>
+
 	          <li>
               <a href="5.html">5. Other Nonfunctional Requirements</a>
 	          </li>
@@ -121,85 +122,76 @@
 
         <!-- Page Content Starts Here -->
 
-        <div class="text-right"><h1 class="md-4">Software Requirements Specification (SRS)</h1>
-          <p><h1>For</h1></p>
-      
-          <p><h1>Snippet</h1></p> <br>
-      
-          <p> <strong> Version 1.0</strong> </p> <br>
-          <p> <strong> Prepared by</strong> </p>
-          <p>Mostafa Mushsharat ID:1931298042</p>
-          <p>Subah ID:123456789</p>
-          <p>Sabiha ID:123456789</p> <br>
-          <p> <strong> Organization: North South University </strong> </p> <br>
-          <p> <strong> Date Created ... </strong> </p> <br>
-      
-      </div>
-      <br>
-      
-      <div><h1>Table of Contents</h1>
-      
-      
-      <pre>
-      <strong> 1. Introduction</strong>
-            1.1 Purpose
-            1.2 Document Conventions
-            1.3 Intended Audience and Reading Suggestions
-            1.4 Product Scope
-            1.5 References
-      <strong> 2. Overall Description</strong>
-            2.1 Product Perspective
-            2.2 Product Functions
-            2.3 User Classes and Characteristics
-            2.4 Operating Environment
-            2.5 Design and Implementation Constraints
-            2.6 User Documentation 
-            2.7 Assumptions and Dependencies 
-      <strong> 3. External Interface Requirements</strong>
-            3.1 User Interfaces 
-            3.2 Hardware Interfaces 
-            3.3 Software Interfaces 
-            3.4 Communications Interfaces
-      <strong> 4. System Features</strong>
-            4.1 Login: R1
-            4.2 Signup: R2
-            4.3 Create Search Cluster: R3
-            4.4 Search Multple Cluster: R4
-            4.5 View Search Result: R5
-            4.6 Export Search Result: R6
-            4.7 Logout: R7
-            4.8 Voice Input Search: R8
-      <strong> 5. Other Nonfunctional Requirements</strong>
-            5.1 Performance Requirements
-            5.3 Security Requirements
-            5.4 Software Quality Attributes 
-            5.5 Business Rules      
-      <strong> 6. Other Requirements</strong>
-      <strong> Appendix A: Glossary</strong>
-      <strong> Appendix B: Analysis Models</strong>
-      <strong> Appendix C: To Be Determined List</strong>
-      </pre>
-      
-      
-      <br>
-      <div><h1>Revision History</h1>
-      
-          <table border="">
-              <tbody>
-                  <tr>    <th>Name</th><th>Date</th><th>Reasons for Changes</th><th>Version</th>
-                  </tr>
-      
-                  <tr>
-                      <td>None</td><td>None</td><td>None</td><td>None</td>
-                  </tr>
-                  <tr>
-                      <td>None</td><td>None</td><td>None</td><td>None</td>
-                  </tr>
-      
-              </tbody>
-          </table>
-      </div>
-      <br>
+        <h1 class="md-4">1. Introduction</h1>
+        <br>
+        <div>
+            <h2>1.1 Purpose</h2>
+            <p>The purpose of this document is to present a detailed description of the Web Searching Service 
+                Application. It will describe the application's purpose and features that the project will cover. 
+                It will further elaborate the system constraints, interface and its interactions with other applications.
+                
+            </p>
+            </div><br>
+
+        <div>
+            <h2>1.2 Document Conventions</h2>
+            <p>Describe any standards or typographical conventions that were followed when writing this SRS, 
+                such as fonts or highlighting that have special significance. For example, state whether priorities 
+                for higher-level requirements are assumed to be inherited by detailed requirements, or whether 
+                every requirement statement is to have its own priority.</p>
+        </div><br>
+
+        <div>
+            <h2>1.3 Intended Audience and Reading Suggestions</h2>
+            <p>This document allows users:
+                
+                  <ul>
+                    <li>To navigate through the application, and its various functionalities.</li>
+                    <li>Familiarize the user with the user interface.</li>
+                    <li>Detailed description of the create, view, search and delete operations.</li>
+                    <li>Implement new crawling strategies.</li>
+                    <li>To learn about product flexibility and crawling strategies.</li>
+                  </ul>
+                
+                
+                Allows developers:
+                <ul>
+                  <li>Provides a detailed overview of the application features and functions.</li>
+                  <li>To help improve and build on existing features.</li>
+                  <li>Fix, test and debug existing features.</li>
+                </ul> 
+                
+                Allows marketing managers:
+                <ul>
+                  <li>To understand and target potential users on the market.</li>
+                  <li>Advertise product features across different platforms.</li>
+                </ul>
+                *Users are suggested to read section 1.1, 2.2, 3.1, 3.3, 4.1 and 4.2
+            </p>
+        </div><br>
+
+        <div>
+            <h2>1.4 Product Scope</h2>
+            <p>Snippet is a cross platform web crawling and scrapping application that allows users to 
+          source and save specific text information about their topic of interest in the form of a cluster,
+          which is essentially is a list of saved text files after a webpage is crawled for certain information.
+          The application is cross platform, versatile and can be used for a multitude of search and list 
+          activities, ideal for research work, data sourcing, collecting text resources etc. It will allow
+          users to extract extensive information across multiple URL’s with just a click of a button, save
+          it and access it anytime, anywhere. The in-depth search feature can dig through URLs within URLs 
+          to maximize the output of a search result making the process as swift and easy as possible. 
+          With such a powerful tool at hand, research and data sourcing will be easier than ever before.</p>
+        </div><br>
+
+        <div>
+            <h2>1.5 References</h2>
+            <p>List any other documents or Web addresses to which this SRS refers. These may include user 
+                interface style guides, contracts, standards, system requirements specifications, use case 
+                documents, or a vision and scope document. Provide enough information so that the reader could 
+                access a copy of each reference, including title, author, version number, date, and source or 
+                location.</p>
+        </div>
+
       
         
         <!-- Page Content Ends Here -->

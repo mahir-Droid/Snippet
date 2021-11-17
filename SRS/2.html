@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Snippet</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+  </head>
+
+
+
+  <body>
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="p-4 pt-5">
+		  		<a href="index.html" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
+
+	        <ul class="list-unstyled components mb-5">
+            
+	          <li>
+              <a href="index.html">Home</a>
+            </li>
+
+	          <li>
+	              <a href="1.html">1. Introduction</a>
+	          </li>
+                        
+	          <li class="active">
+              <a href="2.html">2. Overall Description</a>
+	          </li>
+
+	          <li>
+              <a href="3.html">3. External Interface Requirements</a>
+	          </li>
+
+            <li>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">4. System Features</a>
+              <ul class="list-unstyled collapse" id="pageSubmenu">
+                <li>
+                  <a href="4.html">UML Use Case</a>
+                </li>
+                <li>
+                    <a href="4.1.html">4.1 Login: R1</a>
+                </li>
+                <li>
+                    <a href="4.2.html">4.2 Signup: R2</a>
+                </li>
+                <li >
+                    <a href="4.3.html">4.3 Create Search Cluster: R3</a>
+                </li>
+                <li>
+                    <a href="4.4.html">4.4 Search Multple Cluster: R4</a>
+                </li>
+                <li>
+                    <a href="4.5.html">4.5 View Search Result: R5</a>
+                </li>
+                <li>
+                    <a href="4.6.html">4.6 Export Search Result: R6</a>
+                </li>
+                <li>
+                  <a href="4.7.html">4.7 Logout: R7</a>
+                </li>
+                <li>
+                  <a href="4.8.html">4.8 Voice Input Search: R8</a>
+                </li>
+              </ul>
+	          </li>
+            
+	          <li>
+              <a href="5.html">5. Other Nonfunctional Requirements</a>
+	          </li>
+
+            <li>
+              <a href="6.html">6. Other Requirements</a>
+	          </li>
+
+            <li>
+              <a href="A.html">Appendix A: Glossary</a>
+	          </li>
+
+            <li>
+              <a href="B.html">Appendix B: Analysis Models</a>
+	          </li>
+
+            <li>
+              <a href="C.html">Appendix C: To Be Determined List</a>
+	          </li>
+
+
+	        </ul>
+
+	        <div class="footer">
+	        	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+						  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	        </div>
+
+	      </div>
+    	</nav>
+
+
+
+      <!-- Navbar  -->
+      <div id="content" class="p-4 p-md-5">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Menu</span>
+            </button>
+            
+          </div>
+        </nav>
+
+
+        <!-- Page Content Starts Here -->
+        <h1>2. Overall Description</h1>
+        <br>
+
+        <div>
+            <h2>2.1 Product Perspective</h2>
+            <p>Snippet simply is a web crawler that browses a URL to condense and display its contents in a way that is most effective and informative to the user. The idea is to make text data extraction efficient, fast and thorough as it makes research and data sourcing a lot easier, all the user has to provide is the link to crawl and the depth to which it is to be crawled. The system will distill the related documents in the form of a cluster which the user can save or revisit according to their liking. Search strategies can also be customized by the user where they can specify the type of data to extract from the URLs (only text documents in this case). In a world experiencing information explosion, harvesting data out of the internet pool is becoming less feasible every second; that is where Snippet comes in. Data mining, analyzing market demand, monitoring competitor prices are few of the many advantages of using Snippet. A tool powerful enough to extract targeted data rapidly and efficiently. </p>
+        </div><br>
+
+        <div>
+            <h2>2.2 Product Functions</h2>
+            <p>A Snippet Account user can do the following:
+
+                1.	Crawl URLs
+                <ul>
+                  <li>Users can provide one or multiple URLs to be crawled simultaneously.</li>
+                  <li>They can specify the type of text documents they want to extract.</li>
+                  <li>Crawling depth must be specified to crawl links successfully.</li>
+                </ul>
+
+                2.	Create Cluster
+                <ul>
+                  <li>Clusters can be named and saved to be accessed at all times.</li>
+                  <li>View saved clusters and its details.</li>
+                  <li>Existing clusters can be searched, deleted, modified etc.</li>
+                  <li>Export search results.</li>
+                </ul>
+                
+            </p>
+        </div><br>
+
+        <div>
+            <h2>2.3 User Classes and Characteristics</h2>
+            <p>Snippet has an extensively diverse user class considering it can help businesses with their market research and be at the top of their game, and it can also help a college students obtain data for their machine learning project. Anyone can crawl the web for text documents for research, data analysis, data extraction, monitoring market prices etc. </p>
+        </div><br>
+
+        <div>
+            <h2>2.4 Operating Environment</h2>
+            <p>
+              <ul>
+                <li>Database: PostgreSQL</li>
+                <li>Operating System: Windows, IOS, Android</li>
+                <li>Web Server</li>
+                <li>Software framework: Django</li>
+              </ul>
+            </p>
+        </div><br>
+
+        <div>
+            <h2>2.5 Design and Implementation Constraints</h2>
+            <p> 
+              <ul>
+                <li>User information is required to sign up into the system therefore a database is used which the website can access and store user details.</li>
+                <li>Postgre SQL server is used as SQL engine and database.</li>
+                <li>Users can access their Snippet account from and computer with a browser and an internet connection.</li>
+                <li>User must enter their username and password correctly to be able to access their account.</li>
+                <li>User must enter depth of crawling limit to make a search cluster.</li>
+                <li>User must select a search strategy to create a cluster.</li>
+                <li>User can only extract text documents from the system.</li>
+              </ul>
+            </p>
+        </div><br>
+
+        <div>
+            <h2>2.6 User Documentation</h2>
+            <p>Not Applicable</p>
+        </div><br>
+
+        <div>
+            <h2>2.7 Assumptions and Dependencies</h2>
+            <p>Assuming the device runs on a Microsoft or MacOS, Snippet should be able to export cluster data. The product needs third party applications such as Postgre SQL as a database, REST APIs to help the interfaces work cohesively, Django as a framework and A web browser to access the internet. </p>
+        </div><br>
+        
+        <!-- Page Content Ends Here -->
+      
+      
+      </div>
+		</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
