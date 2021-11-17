@@ -127,36 +127,35 @@
 
 
         <!-- Page Content Starts Here -->
-        
+        <br>
         <h1>5. Other Nonfunctional Requirements</h1>
-
+        <br>
         <div>
             <h2>5.1 Performance Requirements</h2>
-            <p>The application performance is optimized to search results as quickly and efficiently as possible and display the data comprehensively. Interacting with the interface will be easy and uninterrupted. System will be able to handle large amounts of data and backup the results in the database. </p>
-        </div><br>
+            <p>The search operation should run with an indexing system like Solr(refer to 1.5) and be optimized to improve search speed.</p>
+          </div><br>
 
         <div>
             <h2>5.2 Safety Requirements</h2>
-            <p>Using a secure database to ensure safety of user information is necessary. Crawling sites that are off limits must be maintained. </p>
+            <p>The search results that are exported by the user may contain many data that are not under free-use policy. Futhermore, the website that it was scraped from
+              may have a citation and fair use policy. The user must be notified before exporting data to take the responsibility and research the respective website and/or company 
+              about their data usage policy.
+            </p>
         </div><br>
 
         <div>
             <h2>5.3 Security Requirements</h2>
-            <p>Users details must be stored in a secure database and will only be able to modify their own personal details. Users will have access constraints so that the database cannot be accessed.</p>
+            <p>Users details must be stored in a secure database and will only be able to modify their own personal details. Their passwords must be stored in hash.
+               Users will have access constraints so that only personal data can be accessed.</p>
         </div><br>
 
         <div>
             <h2>5.4 Software Quality Attributes</h2>
-            <p>Specify any additional quality characteristics for the product that will be important to either the 
-                customers or the developers. Some to consider are: adaptability, availability, correctness, flexibility, 
-                interoperability, maintainability, portability, reliability, reusability, robustness, testability, and 
-                usability. Write these to be specific, quantitative, and verifiable when possible. These are are features that
-            facilitate the measurement of performance of a software product by Software Testing professionals, and include
-            these attributes.By applying the quality attributes standards we can determine whether the system meets 
-            the requirements of quality or not.As these attributes are applied to QA and QC process so 
-            that both the tester as well as the customer can find the quality of the application or system.At the least, 
-            clarify the relative preferences for various attributes, 
-            such as ease of use over ease of learning.</p>
+            <p>
+              The system should have one backend system that both web platform and mobile platform can access. This should be done with an api that will connect the mobile platform
+              sitting outside the backend system. Furthermore, crawling systems and searching systems should also sit outside the backend project connected through apis. This, even
+              though complicates the initail code base, makes the project simpler to scale; such as incorporating new crawling systems, search indexing, integrating to new platforms.
+            </p>
         </div><br>
 
         <div>

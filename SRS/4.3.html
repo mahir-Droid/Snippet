@@ -141,15 +141,15 @@
           </tr>
           <tr>
             <td>1. A logged in user in their view cluster page clicks on Create Cluster button.</td>
-            <td>2. Prompts the first Create Cluster screen with input: Cluster Name and integer input(1-5): How many urls? </td>
+            <td>2. Prompts the first Create Cluster screen with input: Cluster Name and integer input: How many urls? </td>
           </tr>
           <tr>
-            <td>3. User inputs the name and number of clusters(1-5) and clicks submit button.</td>
-            <td>4. Prompts the second Create Cluster screen with muliple(according to user input) URL input with category selections each.</td>
+            <td>3. User inputs the name and number of clusters and clicks submit button.</td>
+            <td>4. Prompts the second Create Cluster screen with muliple(according to user input) URL input with category selections each along with another integer input: Depth(1-5).</td>
           </tr>
           <tr>
-            <td>5. User inputs the urls and their categories respectively multiple times(according to their previous integer input).</td>
-            <td>6. The information is passed to the system and it fetches data from each URL according to their respective types and saves them in a cluster.
+            <td>5. User inputs the urls, their categories and depth respectively multiple times(according to their previous integer input).</td>
+            <td>6. The information is passed to the system and it fetches data from all URL(s) according to their respective types and saves them in a cluster.
               The user is then redirected to the view cluster page where they can see the representaion of their newly created cluster.</td>
           </tr>
         </table>
@@ -157,7 +157,8 @@
 
         <h4>4.3.3 Functional Requirements</h4>
         <p>User must be in web platform to execute this feature. This feature is unavailable in mobile platform. The user should input valid URLs to search. The validity of the URLs must be checked by the system. Upon wrong input, the system should redirect
-          user back to the second Create Cluster page with error message: "Enter valid URL". In the first Create Cluster page, the input form of number of cluster
+          user back to the second Create Cluster page with error message: "Enter valid URL".In the first Create Cluster page, the input should be checked to be an integer otherwise an error message should be prompted.
+           In the second Create Cluster page, the integer input form of depth
           should be in a dropdown box with stated numbers 1-5 to choose from. 
         </p>
         <p>The cluster should fetch and update data automatically at regular intervals to keep its data on par with the new updates of the URLs. </p>

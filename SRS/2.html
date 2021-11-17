@@ -126,24 +126,30 @@
 
         <div>
             <h2>2.1 Product Perspective</h2>
-            <p>Snippet simply is a web crawler that browses a URL to condense and display its contents in a way that is most effective and informative to the user. The idea is to make text data extraction efficient, fast and thorough as it makes research and data sourcing a lot easier, all the user has to provide is the link to crawl and the depth to which it is to be crawled. The system will distill the related documents in the form of a cluster which the user can save or revisit according to their liking. Search strategies can also be customized by the user where they can specify the type of data to extract from the URLs (only text documents in this case). In a world experiencing information explosion, harvesting data out of the internet pool is becoming less feasible every second; that is where Snippet comes in. Data mining, analyzing market demand, monitoring competitor prices are few of the many advantages of using Snippet. A tool powerful enough to extract targeted data rapidly and efficiently. </p>
+            <p>Snippet simply is a web crawler that browses a URL to condense and display its contents in a way that is most effective
+               and informative to the user. The idea is to make text data extraction efficient, fast and thorough as it makes research 
+               and data sourcing a lot easier, all the user has to provide is the link to crawl and the depth to which it is to be crawled. 
+               The system will distill the related documents in the form of a cluster which the user can save or revisit according to their liking. 
+               Search strategies can also be customized by the user where they can specify the type of data to extract from the URLs (only text based documents in this case).
+                In a world experiencing information explosion, harvesting data out of the internet pool is becoming less feasible every second;
+                 that is where Snippet comes in. Data mining, analyzing market demand, monitoring competitor prices are few of the many advantages of using Snippet.
+                  A tool powerful enough to extract targeted data rapidly and efficiently. </p>
         </div><br>
 
         <div>
             <h2>2.2 Product Functions</h2>
             <p>A Snippet Account user can do the following:
-
+              <br>
                 1.	Crawl URLs
                 <ul>
                   <li>Users can provide one or multiple URLs to be crawled simultaneously.</li>
-                  <li>They can specify the type of text documents they want to extract.</li>
+                  <li>They can specify the type of data they want to extract.</li>
                   <li>Crawling depth must be specified to crawl links successfully.</li>
                 </ul>
 
                 2.	Create Cluster
                 <ul>
                   <li>Clusters can be named and saved to be accessed at all times.</li>
-                  <li>View saved clusters and its details.</li>
                   <li>Existing clusters can be searched, deleted, modified etc.</li>
                   <li>Export search results.</li>
                 </ul>
@@ -153,44 +159,41 @@
 
         <div>
             <h2>2.3 User Classes and Characteristics</h2>
-            <p>Snippet has an extensively diverse user class considering it can help businesses with their market research and be at the top of their game, and it can also help a college students obtain data for their machine learning project. Anyone can crawl the web for text documents for research, data analysis, data extraction, monitoring market prices etc. </p>
-        </div><br>
+            <p>TBD</p>
+          </div><br>
 
         <div>
             <h2>2.4 Operating Environment</h2>
             <p>
-              <ul>
-                <li>Database: PostgreSQL</li>
-                <li>Operating System: Windows, IOS, Android</li>
-                <li>Web Server</li>
-                <li>Software framework: Django</li>
-              </ul>
+                The platform will be built to run on chormium based web browser and mobile platform
+                : Android and iOS. Any build of these systems in the past 3 years will be supported by
+                the 
             </p>
         </div><br>
 
         <div>
             <h2>2.5 Design and Implementation Constraints</h2>
             <p> 
-              <ul>
-                <li>User information is required to sign up into the system therefore a database is used which the website can access and store user details.</li>
-                <li>Postgre SQL server is used as SQL engine and database.</li>
-                <li>Users can access their Snippet account from and computer with a browser and an internet connection.</li>
-                <li>User must enter their username and password correctly to be able to access their account.</li>
-                <li>User must enter depth of crawling limit to make a search cluster.</li>
-                <li>User must select a search strategy to create a cluster.</li>
-                <li>User can only extract text documents from the system.</li>
-              </ul>
+              The web search is performed by the system by crawling throught the websites
+              provided by the user. This can introduce a problem however, if the URL provided by
+              the user has restriced crawling. In this case the system will not be able to fetch any
+              data. 
+            </p>
+            <p>Moreover, the crawling system will be ideally designed as an external system so that the 
+              client can scale the project to incorporate new crawlers to advocate new types of data scraping.
+              e.g. Image, Video etc. This succession is open to consideration for the client and the responsibilty is
+              expected to be taken by the client until further negotiation.
             </p>
         </div><br>
 
         <div>
             <h2>2.6 User Documentation</h2>
-            <p>Not Applicable</p>
+            <p>TBD</p>
         </div><br>
 
         <div>
             <h2>2.7 Assumptions and Dependencies</h2>
-            <p>Assuming the device runs on a Microsoft or MacOS, Snippet should be able to export cluster data. The product needs third party applications such as Postgre SQL as a database, REST APIs to help the interfaces work cohesively, Django as a framework and A web browser to access the internet. </p>
+            <p>TBD</p>
         </div><br>
         
         <!-- Page Content Ends Here -->

@@ -128,17 +128,8 @@
       <div>
           <h2>3.1 User Interfaces</h2>
           <p>
-            Describe the logical characteristics of each interface between the software product and the users. 
-              This may include sample screen images, any GUI standards or product family style guides that are 
-              to be followed, screen layout constraints, standard buttons and functions  that will 
-              appear on every screen, keyboard shortcuts, error message display standards, and so on.The user 
-          interface must be secure, convenient and extensible. Security requirements 
-        include the need to protect authorization information from unauthorized access, the maintenance 
-        of customer confidentiality.Since the user interface environment shall be organized during the development
-        phase as a flexible, easy-to-update, dynamically configurable system.Define the software components 
-        for which a user interface is needed. There are four types of user interfaces.These are Command Line Interface,
-      Menu-driven Interface, Graphical User Interface, Touchscreen Graphical User Interface. Details of the user interface design should be documented in a 
-        separate user interface specification.</p>
+           TBD
+          </p>
           </div><br>
 
       <div>
@@ -148,25 +139,19 @@
 
       <div>
           <h2>3.3 Software Interfaces</h2>
-          <p>Describe the connections between this product and other specific software components, including databases, 
-        operating systems, tools, libraries,IP network protocols, the software drivers that activate the peripheral devices
-        and integrated commercial components. Identify the data items or messages coming into the system and going out and 
-              describe the purpose of each. Describe the services needed and the nature of communications. 
-              Refer to documents that describe detailed application programming interface protocols. Identify 
-              data that will be shared across software components. If the data sharing mechanism must be 
-              implemented in a specific way, specify this as an implementation constraint.</p>
+          <p>The backend will be built with Django and PostgreSQL will be the server hosted locally that connects to the backend with Psycopg2 as the database adapter. Django templates will serve as the frontend for the web platform.
+            Django REST API that sits outsite the backend system will help connect to the Mobile Platform front end built with
+            React Native that also sits outsite the system. Web Crawlers will be made with Beautiful Soup and Selenuim and connected to the backend via their api.
+            The data storage for scraped data by the crawlers are to be determined.
+            Search indexing system will be implemented via Solr(a Lucene based system) that will similarly interact with the database via an api.
+          </p>
       </div><br>
 
       <div>
           <h2>3.4 Communications Interfaces</h2>
-          <p>Describe the requirements associated with any communications functions required by this 
-              product, including e-mail, web browser, network server communications protocols, electronic 
-              forms, and so on. Define any pertinent message formatting. Communication
-      between the client and server should utilize a REST-compliant web service.Identify any communication standards 
-              that will be used, such as File Transfer Protocol or Hyper Text Transfer Protocol.The client-server 
-          communication must be stateless. A
-      uniform interface must separate the client roles from the server roles. Specify any communication
-          security or encryption issues, data transfer rates, and synchronization mechanisms.</p>
+          <p>The communicaiton between backend and multiple frontends are to be carried out following
+            the REST standard. Communication methods for other systems are to be determined.
+          </p>
       </div><br>
 
         
