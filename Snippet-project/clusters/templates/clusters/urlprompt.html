@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+{% if error %}
+{{error}}
+{% endif %}
+
+<br>
+
+<h1>URL Prompt</h1>
+
+<form method="POST" action="{% url 'urlprompt' %}">
+{% csrf_token %}
+
+    Cluster Title:
+    <br/>
+    <input type="text" name ="title">
+    <br/>
+    Number of URLs to search:
+    <br/>
+    <input type="number" name="nourl" min="0">
+    <br/>
+    <br/>
+    <input type="submit" value="Submit">
+
+</form>
+
+{% endblock %}

@@ -1,8 +1,36 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib import auth
+from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+
+
+import requests
+from bs4 import BeautifulSoup
+
+
+
+@login_required
+def home(request):    
+    #TODO: Delete the code below. 
+    # get all the clusternames and list them
+    # with radio buttons with submit buttons named
+    # search. Then direct to the search page. 
+    r = requests.get("https://www.dsebd.org/")
+    soup = BeautifulSoup(r.content, 'html.parser')
+
+    headings = soup.find_all()
+
+    data = []
+
+    for th in headings:
+        data.append(th.text)
+
+    return render(request, 'accounts/home.html', {'data':data})
+    
+
+
 
 def signup(request):
     if request.method == 'POST':

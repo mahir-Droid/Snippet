@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+
+{% if error %}
+{{error}}
+{% endif %}
+
+<br>
+
+<h1>Create Cluster</h1>
+<h3>For {{ title }}</h3>
+
+<br><br><br>
+
+<h3>Number of Urls:</h3>
+<form method="POST" action="{% url 'create' %}">
+{% csrf_token %}
+
+
+    {% for i in nourl %}
+        URL:
+        <br/>
+        <input type="text" name ="url">
+        <br/>
+        Data to Search:
+        <br/>
+        <input type="radio" id="all" name="datatype" value="All">
+        <label for="all">All</label>
+
+        <input type="radio" id="pdf" name="datatype" value="PDF">
+        <label for="pdf">PDF</label>
+
+        <input type="radio" id="doc" name="datatype" value="Doc">
+        <label for="doc">Doc</label>
+
+        <input type="radio" id="txt" name="datatype" value="Text">
+        <label for="txt">Text</label>
+
+        <input type="radio" id="nonhtml" name="datatype" value="Non-Html">
+        <label for="nonhtml">Non-Html</label>
+    
+        <br/>
+        <label for="depth">Depth:</label>
+        <select name="depth" id="depth">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <br>
+
+        <hr>
+    {% endfor %}    
+
+
+    <br>    
+    <input type="hidden" id="title" name="title" value="{{title}}">
+    <br>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+
+
+
+{% endblock %}
