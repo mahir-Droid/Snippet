@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Create Cluster</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: url(Nebula.jpeg);
+            background-size: cover;
+            background-position: center;
+            font-family: sans-serif;
+        }
+        h1{
+            color: rgb(250, 250, 109);
+            text-align: center;
+            padding: 40px;
+            font-style: italic;
+        }
+        .myform{
+            text-align: center;
+            color:rgb(250, 250, 109);
+            font-weight: bold;
+            font-style: italic;
+            padding: 20px;
+        }
+
+    </style>
+  </head>
+  <body>
+      <h1>Create New Cluster</h1>
+      <div class="myform">
+      <form action="#">
+          <label for="urls">Enter URL: </label>
+          <input type="text" id="urls" name="urls"><br><br>
+          <p>Documents to search for: </p><br>
+          <input type="radio" id="pdf" name="crawling_strategy" value="PDF">
+          <label for="pdf">PDF</label><br>
+          <input type="radio" id="doc" name="crawling_strategy" value="DOC">
+          <label for="doc">DOC</label><br>
+          <input type="radio" id="text" name="crawling_strategy" value="TXT">
+          <label for="text">TEXT</label><br>
+          <input type="radio" id="non-html" name="crawling_strategy" value="NON-HTML">
+          <label for="non-html">NON-HTML</label><br>
+          <input type="radio" id="all" name="crawling_strategy" value="ALL">
+          <label for="all">ALL</label><br><br>
+          <label for="depth">Depth to crawl: </label>
+          <input type="number" id="depth" name="depth"><br><br>
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
