@@ -4,29 +4,85 @@
 
 {% block content %}
 
-    <h1>Testing Scraping</h1>
-<br>
-<br>
-<br>
-<div class="container">
-
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color:lightgray;
+        background-size: cover;
+        background-position: center;
+        font-style: italic;
+    }
+    .contain{
+      height: 200px;
+      padding: 200px;
+    }
+    h1{
+      text-align: center;
+      color: rgb(250, 250, 109);
+    }
+    .btn{
+        outline: none;
+        height: 50px;
+        width: 100%;
+        background-color: rgb(202, 202, 202);
+        color: black;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+    .btn:hover{
+        background-color: white;
+        border: 1px solid;
+        color: black;
+    }
     
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-12">
-                <h3 class="text-centre"> Data from Dhaka Stock Exchange</h3>
-                <br>
-                {% for d in data %}
-                <h5> -  {{d}} </h5>
-                <hr>
-                {% endfor %}
-                <br>
-        </div>
+</style>
+
+
+<div class="container contain">
+    <div class="row justify-content-center">
+      <div class="col-6 align-self-center">
+        <h1>Home</h1>
+        <br><br><br>
+        <a href="{% url 'urlprompt' %}">
+            <button type="button" class="btn mt-3 mb-5">Create New Cluster</button>
+        </a>
+      </div>
     </div>
+  </div>
 
 
+<br><br><br><br>
+<br><br><br><br>
+
+
+<p style="color:black;font-family:Raleway Light; text-align:center;"><h2>Your Clusters:</h2><br>
+  
+  {% for cluster in clusters.all %}
+  <div class="form-check-inline">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input" value="">{{ cluster.title }}</input>
+      
+    </label>
+  </div>&nbsp;
+  {% endfor %}
+
+
+</p>
+  <button class= "btn btn-outline-primary mb-3 btn-md">Search</a></button>
+  </div>
+ <br><br><br><br><br><br>
+    </form><br><br><br><br><br><br>
+    </div>
+  </div>
 </div>
+</div>
+</div>
+</div><br><br>
+</section>
+
+
+
 
 
 

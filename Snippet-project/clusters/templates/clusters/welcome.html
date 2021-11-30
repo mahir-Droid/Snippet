@@ -4,8 +4,41 @@
 
 {% block content %}
 
-    <h1>Welcome</h1>
+    <style>
+      
+      .row{
+      background: white;
+      border-radius: 20px;
+      }
+    </style>
 
+<section class="Form my-3 mx-7">
+    <div class="container">
+      <div class="row no-gutters">
+<div class="py-3">
+          
+   </div><br> <br>
+  <div class=" col-md-12 text-center">
+   
+    <h4 style="text-align:center;font: size 1px;"> <t style="color:black;font-family:Lato Black;">
+       Welcome to</t></h4><br>
+    <h1> <t style="color:#0f0f0d;font-family:Domillion Brush Free;">Snippet</a></t></h1> <br>
+<p style="color:black;font-family:Raleway Light; text-align:center;"><b>
+
+    {% if user.is_authenticated %}
+    <p>Go to <a href="{% url 'home' %}">Home</a></p>
+
+    {% else %}
+<a href="{% url 'signup' %}">Sign Up </a> &nbsp;to create a new account.<br><br>
+Or <a href="{% url 'login' %}">Log In</a>&nbsp; if you already have an account</b></p>
+
+    {% endif %}
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</div>
+</div>
+</div>
+</section>
 
 
 {% endblock %}

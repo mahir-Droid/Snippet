@@ -3,30 +3,47 @@
 
 {% block content %}
 
+<style>
+    .row{
+    background: white;
+    border-radius: 20px;
+    }
+</style>
+
+
 {% if error %}
 {{error}}
 {% endif %}
 <br>
 
+<center>
 <h1>Signup</h1>
-<form method="POST" action ="{% url 'signup' %}">
-{% csrf_token %}
+</center>
 
-Username:
-<input type="text" name="username"/>
-<br>
-Email:
-<input type="text" name="email"/>
-<br>
-Password:
-<input type="password" name="password1"/>
-<br>
-Confirm Password:
-<input type="password" name="password2"/>
-<br>
-<input type="submit" value="Signup">
+<section class="Form my-3 mx-7">
+    <div class="container">
+      <div class="row no-gutters">
 
-</form>
+        <form method="POST" action ="{% url 'signup' %}" class="w-50 m-auto" required>
+        {% csrf_token %}
 
+        Username:
+        <input type="text" name="username" class="form-control" required/>
+        <br>
+        Email:
+        <input type="text" name="email" class="form-control" required/>
+        <br>
+        Password:
+        <input type="password" name="password1" placeholder="********" class="form-control" required/>
+        <br>
+        Confirm Password:
+        <input type="password" name="password2" placeholder="********" class="form-control" required/>
+        <br>
+        <input type="submit" value="Signup" class= "btn btn-outline-dark mb-3 btn-md">
+
+        </form>
+      </div>
+    </div>
+</section>
 
 {% endblock %}

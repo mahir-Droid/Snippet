@@ -2,29 +2,81 @@
 
 {% block content %}
 
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background: rgb(202, 202, 202);
+    }
+    .row{
+        background: white;
+        border-radius: 30px;
+    }
+    img{
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px ;
+    }
+    .btn1{
+        border: none;
+        outline: none;
+        height: 50px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+    .btn1:hover{
+        background-color: white;
+        border: 1px solid;
+        color: black;
+    }
+</style>
+
+
+
 {% if error %}
 {{error}}
 {% endif %}
 <br>
 
-<h1>Login</h1>
 
-<form method="POST" action="{% url 'login' %}">
-{% csrf_token %}
+<section class="form my-4 mx-5">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-lg-5">
+                <img src="https://previews.123rf.com/images/ingalinder/ingalinder1711/ingalinder171100117/90626153-tile-vector-pattern-with-black-polka-dots-on-yellow-background.jpg" class ="img-fluid" alt="">
+            </div>
+            <div class="col-lg-7 px-5 pt-5">
+                <h1 class="font-weight-bold py 3">Snippet</h1>
+                <h5>Sign into your account</h5>
 
-    Username:
-    <br/>
-    <input type="text" name ="username">
-    <br/>
-    Password:
-    <br/>
-    <input type="password" name="password">
-    <br/>
-    <br/>
-    <input type="submit" value="Login">
+                <form method="POST" action="{% url 'login' %}">
+                    {% csrf_token %}
 
-</form>
-
-
+                    <div class="form-row">
+                        <div class="col-lg-7">
+                            <input type="text" name="username" placeholder="username"  class="form-control my-3 p-4" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-lg-7">
+                            <input type="password" name="password" placeholder="*******" class="form-control my-3 p-4" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-lg-7">
+                            <input type="submit" value="Login" class="btn1 mt-3 mb-5">
+                        </div>
+                    </div>
+                    <p>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}

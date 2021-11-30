@@ -10,22 +10,29 @@
 
 <br>
 
-<h1>URL Prompt</h1>
+<style>
+    .row{
+    background: white;
+    border-radius: 20px;
+  }
+</style>
 
-<form method="POST" action="{% url 'urlprompt' %}">
+
+<form method="POST" action="{% url 'urlprompt' %}" class="w-50 m-auto" required>
 {% csrf_token %}
 
-    Cluster Title:
+    <h3>Cluster Title:</h3>
     <br/>
-    <input type="text" name ="title">
+    <input type="text" name ="title" class="form-control" required>
     <br/>
-    Number of URLs to search:
+    <h3>Number of URLs to search:</h3>
     <br/>
-    <input type="number" name="nourl" min="0">
+    <input type="number" name="nourl" min="0" class="form-control" required>
     <br/>
     <br/>
-    <input type="submit" value="Submit">
+    <input class= "btn btn-primary mb-3 btn-md" type="submit" value="Submit">
 
 </form>
+
 
 {% endblock %}

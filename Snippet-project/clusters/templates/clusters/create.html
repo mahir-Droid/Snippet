@@ -4,6 +4,29 @@
 
 {% block content %}
 
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: lightgray;
+        background-size: cover;
+        background-position: center;
+    }
+    h1{
+        color: rgb(250, 250, 109);
+        text-align: center;
+        padding: 40px;
+        font-style: italic;
+    }
+    .myform{
+        text-align: center;
+        color:rgb(250, 250, 109);
+        font-weight: bold;
+        font-style: italic;
+        padding: 20px;
+    }
+
+</style>
 
 {% if error %}
 {{error}}
@@ -12,37 +35,33 @@
 <br>
 
 <h1>Create Cluster</h1>
-<h3>For {{ title }}</h3>
+<h3>Title: {{ title }}</h3>
 
 <br><br><br>
 
-<h3>Number of Urls:</h3>
-<form method="POST" action="{% url 'create' %}">
+<form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
 {% csrf_token %}
 
 
     {% for i in nourl %}
         URL:
         <br/>
-        <input type="text" name ="url">
+        <input type="text" name ="url" required>
         <br/>
-        Data to Search:
+
         <br/>
-        <input type="radio" id="all" name="datatype" value="All">
-        <label for="all">All</label>
+        <label for="datatype">Data to Search:</label>
+        <select name="datatype" id="datatype">
+            <option value="All">All</option>
+            <option value="pdf">PDF</option>
+            <option value="doc">DOC</option>
+            <option value="Text">Text</option>
+            <option value="nonhtml">Non-HTML</option>
+        </select>
+        <br>
 
-        <input type="radio" id="pdf" name="datatype" value="PDF">
-        <label for="pdf">PDF</label>
 
-        <input type="radio" id="doc" name="datatype" value="Doc">
-        <label for="doc">Doc</label>
 
-        <input type="radio" id="txt" name="datatype" value="Text">
-        <label for="txt">Text</label>
-
-        <input type="radio" id="nonhtml" name="datatype" value="Non-Html">
-        <label for="nonhtml">Non-Html</label>
-    
         <br/>
         <label for="depth">Depth:</label>
         <select name="depth" id="depth">
@@ -61,8 +80,12 @@
     <br>    
     <input type="hidden" id="title" name="title" value="{{title}}">
     <br>
+    <br>    
+    <input type="hidden" id="n" name="n" value="{{n}}">
+    <br>
 
-    <input type="submit" value="Submit">
+
+    <input type="submit" value="Submit" class="btn btn-primary mb-3 btn-md">
 
 </form>
 
