@@ -4,9 +4,10 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from .models import Cluster
 from .models import URL
+from django.http import HttpResponse
 
 from .mycrawler import *
-
+from .task import *
 
 
 
@@ -76,3 +77,13 @@ def create(request):
             print("URL Models Created for"+str(i)+"-------")
 
         return redirect('home')
+
+
+
+def test(request):
+    #Sample for using celery to schedule task to redis server
+    name = request.user.username  
+    sleepy.delay(10, name)  #Note that request, model objects cannot be sent to celery as they are not serializable.
+    # Only json serialisable objects like int,str etc. can be sent. In this case the particular object(like the username of hunter) required
+    # are sent and then the Usermodel is fetched using that name and used in celery task function.
+    return HttpResponse("<h1>Testing.|||</h1>")
