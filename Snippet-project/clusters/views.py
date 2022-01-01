@@ -2,6 +2,8 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from django.contrib.auth.models import User
+
+import clusters
 from .models import Cluster
 from .models import URL, Data
 from django.http import HttpResponse
@@ -10,7 +12,6 @@ from .mycrawler import *
 from .task import *
 
 from django.contrib.postgres.search import SearchQuery, SearchVector, SearchRank
-from django.contrib.postgres.search import SearchHeadline
 
 def welcome(request):
     return render(request, 'clusters/welcome.html')
@@ -64,24 +65,35 @@ def create(request):
 
 @login_required
 def search(request):
+    
+    user_selected_clusters = request.POST.get('user_selected_clusters')
+    print(user_selected_clusters)
+    print(type(user_selected_clusters))
+    returned_data = request.POST.get('returned_data')
+
+    if(user_selected_clusters):
+        pass
+    else:
+        user_selected_clusters = returned_data
+
 
     q = request.GET.get('q')
     if q:
         vector = SearchVector('data_url', 'content', 'type')
         query = SearchQuery(q)
 
-        search_headline = SearchHeadline('content', query)
-
-        #search_data = Data.objects.filter(data_url__search=q)
-        #search_data = Data.objects.annotate(search=vector).filter(search=query)
-        #search_data = Data.objects.annotate(rank=SearchRank(vector, query)).filter(rank__gte=0.0001).order_by('-rank')
-        search_data = Data.objects.annotate(rank=SearchRank(vector, query)).annotate(headline=search_headline).filter(rank__gte=0.0001).order_by('-rank')
-
+        #search_headline = SearchHeadline('content', query) # Only works in Django 3.1 and above
+        userdatas = Data.objects.filter(cluster__title=returned_data)
+        #search_data = userdatas.annotate(rank=SearchRank(vector, query)).filter(rank__gte=0.0001).order_by('-rank')
+        search_data = Data.objects.annotate(rank=SearchRank(vector, query)).filter(rank__gte=0.0001).order_by('-rank')
+        
+        #search_data = Data.objects.annotate(rank=SearchRank(vector, query)).annotate(headline=search_headline).filter(rank__gte=0.0001).order_by('-rank')
+        print(userdatas)
     else:
         search_data = None
 
 
-    context={'search_data': search_data}
+    context={'search_data': search_data, 'user_selected_clusters':user_selected_clusters}
     
     return render(request, 'clusters/search.html', context)
 

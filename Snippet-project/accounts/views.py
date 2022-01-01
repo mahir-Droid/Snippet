@@ -10,7 +10,7 @@ def home(request):
     #TODO: Submit buttons named
     # search will direct to the search page.
     
-    clusters = Cluster.objects.filter(hunter=request.user)
+    clusters = Cluster.objects.filter(hunter=request.user, status='finished')
     
     return render(request, 'accounts/home.html', {'clusters':clusters})
     

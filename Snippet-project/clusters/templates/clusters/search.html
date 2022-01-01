@@ -7,22 +7,49 @@
 <br>
 <form>
 
-    <input type="text" name="q">
-    <button>Search</button>
+    <input  type="text" name="q">
+    <button class= "btn btn-primary mb-3 btn-md">Search</button>
+
+    <br>    
+    <input type="hidden" name="returned_data" value="{{user_selected_clusters}}">
+    <br>
 
 </form>
+<h3>Using Clusters:</h3>
+{% for i in user_selected_clusters %}
+    {{ i }}
+{% endfor %}
 
 {% if search_data %}
 Results: {{ search_data|length }}
+{% endif %}
 
 
+
+<br><br><br>
 {% for data in search_data %}
 <h3>
     <a href="{{ data.data_url }}"> {{ data.data_url }} </a>
-    {{ data.headline|safe }}
     {{ data.rank }}
 </h3>
 
 {% endfor %}
+
+<a class="btn btn-info" href ="#" id="donwload-link" onClick="myFunction()">Download Page</a>
+
+<script>
+    function myFunction() {
+      var content = document.documentElement.innerHTML;
+      download(content, "index", "html")
+    
+    }
+    function download(content, fileName, fileType) {
+      var link = document.getElementById("donwload-link");
+      var file = new Blob([content], {type: fileType});
+      var downloadFile = fileName + "." + fileType;
+      link.href = URL.createObjectURL(file);
+      link.download = downloadFile
+    }
+</script>
 
 {% endblock %}

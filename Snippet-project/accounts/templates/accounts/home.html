@@ -58,19 +58,31 @@
 
 <p style="color:black;font-family:Raleway Light; text-align:center;"><h2>Your Clusters:</h2><br>
   
-  {% for cluster in clusters.all %}
-  <div class="form-check-inline">
-    <label class="form-check-label">
-      <input type="checkbox" class="form-check-input" value="">{{ cluster.title }}</input>
-      
-    </label>
-  </div>&nbsp;
-  {% endfor %}
+
+  <form method="POST" action="{% url 'search' %}" class="w-50 m-auto" required>
+    {% csrf_token %}
+    
+        {% for cluster in clusters.all %}
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" name="user_selected_clusters" value="{{ cluster.title }}"><h4>{{ cluster.title }}</h4></input>
+          </label>
+        </div>&nbsp;
+        {% endfor %}
+        <br/>
+        <br/>
+        <input class= "btn btn-primary mb-3 btn-md" type="submit" value="Search">
+    
+    </form>
+
 
 
 </p>
-  <button class= "btn btn-outline-primary mb-3 btn-md">Search</a></button>
-  </div>
+
+
+
+
+</div>
  <br><br><br><br><br><br>
     </form><br><br><br><br><br><br>
     </div>
