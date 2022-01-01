@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<br>
+<form>
+
+    <input type="text" name="q">
+    <button>Search</button>
+
+</form>
+
+{% if search_data %}
+Results: {{ search_data|length }}
+
+
+{% for data in search_data %}
+<h3>
+    <a href="{{ data.data_url }}"> {{ data.data_url }} </a>
+    {{ data.headline|safe }}
+    {{ data.rank }}
+</h3>
+
+{% endfor %}
+
+{% endblock %}
